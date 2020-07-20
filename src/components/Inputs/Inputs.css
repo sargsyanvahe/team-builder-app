@@ -1,0 +1,156 @@
+.file-container {
+    position: relative;
+}
+
+.file-container > span {
+    position: absolute;
+    font-size: 13px;
+    font-style: italic;
+    color: #ff7979;
+    top: 75%;
+}
+
+.file-name {
+    overflow: hidden;
+    position: relative;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+}
+
+.file-name div {
+    transform: translateX(-42%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.file-name img {
+    height: 25px;
+    cursor: pointer;
+}
+
+.file-name input {
+    color: gray;
+    outline: none;
+}
+
+.file-name span {
+    position: absolute;
+    font-size: 13px;
+    font-style: italic;
+    color: #ff7979;
+    top: 102%;
+}
+
+.radio-container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin: 0 20px 12px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.radio-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+
+.radio-container:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+.radio-container input:checked ~ .checkmark {
+    background-color: #2196F3;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.radio-container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.radio-container .checkmark:after {
+    top: 9px;
+    left: 9px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+}
+
+.input-container {
+    position: relative;
+    margin: 10px;
+}
+
+.input-container select{
+    cursor: pointer;
+}
+
+.error-message {
+    position: absolute;
+    font-size: 13px;
+    font-style: italic;
+    color: #ff7979;
+    top: 102%;
+    left: 0;
+}
+
+.input {
+    height: 35px;
+    width: 100%;
+    outline: none;
+    border: 1px solid #e0e1e8;
+    border-radius: 3px;
+    font-size: 15px;
+    text-indent: 10px;
+    font-family: 'Montserrat', sans-serif;
+    transition: .3s;
+}
+
+.input:focus {
+    background: #f4f6f8;
+}
+
+.input::placeholder {
+    font-size: 12px;
+    font-style: italic;
+    color: rgba(0, 0, 0, 0.3)
+}
+
+.input-error {
+    border-color: #ff7979;
+}
+
+.input-date-container {
+    position: relative;
+    margin: 0 20px;
+}
+
+.input-date-container span {
+    position: absolute;
+    top: 102%;
+    font-size: 13px;
+    font-style: italic;
+}

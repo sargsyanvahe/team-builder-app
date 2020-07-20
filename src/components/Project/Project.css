@@ -1,0 +1,12 @@
+.project-container{
+    padding: 30px 40px;
+    margin: 130px auto;
+    width: 50%;
+    box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
+    background: white;
+}

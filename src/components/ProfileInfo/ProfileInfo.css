@@ -1,0 +1,19 @@
+.profile-info-container {
+    padding: 20px 15px;
+    margin: 130px auto;
+    width: max-content;
+    box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: white;
+}
+
+.profile-info-container > div {
+    display: flex;
+    width: 500px;
+    margin: 10px 0;
+    justify-content: flex-start;
+    align-items: center;
+}
