@@ -1,12 +1,12 @@
 import React from "react";
-import { client } from "../Client";
 import { Redirect } from 'react-router-dom';
-import Popup from "../components/Auth/Popup";
-
-import Login from "../components/Auth/Login";
-import { companiesFetchData } from "../redux/actions/companies";
-import { getUserInfoFetch } from "../redux/actions/user";
+import { client } from "../Client";
 import { connect } from "react-redux";
+
+import Popup from "../components/Auth/Popup";
+import Login from "../components/Auth/Login";
+
+import { getUserInfoFetch } from "../redux/actions/user";
 
 class LoginPage extends React.PureComponent {
 

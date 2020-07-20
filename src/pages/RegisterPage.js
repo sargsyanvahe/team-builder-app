@@ -40,7 +40,7 @@ class RegisterPage extends React.PureComponent {
 
     handleInputChange = async (e) => {
         let { value, name, files } = e.target;
-        console.log(!isNaN(value))
+
         if (!isNaN(value)) {
             value = +value;
         }

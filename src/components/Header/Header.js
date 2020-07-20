@@ -30,7 +30,6 @@ class Header extends React.PureComponent {
     render() {
 
         const { openedNavBar } = this.state;
-        console.log(this.props.user.isLogged)
 
         return (
             <>

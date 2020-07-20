@@ -40,7 +40,6 @@ class Client {
     }
 
     async postRegister(data, file) {
-        console.log(file);
         data['avatarUrl'] = await this.imGurUpload(file);
 
         delete data['rePassword'];
@@ -110,7 +109,7 @@ class Client {
     };
 
     voteProject(id, vote) {
-        console.log(vote);
+
         return fetch(`${BASE_URL}/projects/${id}/voting`, {
             headers: {
                 token: this.token,
@@ -127,14 +126,10 @@ class Client {
         if (this.useLocalStorage) {
             localStorage.setItem(key, this.token);
         }
-
-        console.log(this.isLoggedIn())
-
     }
 
     setTokenSessionStorage(token) {
         this.token = token;
-        console.log(this.token)
         if (this.useSessionStorage) {
             sessionStorage.setItem(key, this.token);
         }
@@ -150,8 +145,6 @@ class Client {
         if (this.useLocalStorage) {
             localStorage.removeItem(key);
         }
-
-        console.log(this.token)
     }
 
     getCompanies() {
