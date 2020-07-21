@@ -3,6 +3,10 @@
 # dependencies
 /node_modules
 /.pnp
+/.firebase
+.firebaserc
+firebase.json
+/.idea
 .pnp.js
 
 # testing
