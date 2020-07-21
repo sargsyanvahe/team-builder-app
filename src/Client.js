@@ -66,6 +66,16 @@ class Client {
 
     };
 
+    getTeams() {
+
+        return fetch(`${BASE_URL}/teams`, {
+            headers: {
+                token: this.token
+            }
+        })
+
+    };
+
     voteTopic(id, vote) {
         return fetch(`${BASE_URL}/topics/${id}/voting`, {
             headers: {

@@ -2,7 +2,7 @@ import React from "react";
 
 import './Team.css'
 
-export default function Team({ name = 'Name', topic = 'Topic', project = 'Project', members }) {
+export default function Team({ name, topic, project, members }) {
 
     return (
         <div className='team-container'>
@@ -11,38 +11,14 @@ export default function Team({ name = 'Name', topic = 'Topic', project = 'Projec
             <h3>Topic: {topic}</h3>
             <h3>Project: {project}</h3>
             <ul>
-                <li>
+                {members && members.map(({ firstName, avatarUrl }) => <li key={Date.now()}>
                     <div className='img-container'>
                         <img
-                            src="https://upload-icon.s3.us-east-2.amazonaws.com/uploads/icons/png/4080540331548233623-512.png"
+                            src={avatarUrl}
                             alt=""/>
                     </div>
-                    <p>Vahe</p>
-                </li>
-                <li>
-                    <div className='img-container'>
-                        <img
-                            src="https://upload-icon.s3.us-east-2.amazonaws.com/uploads/icons/png/4080540331548233623-512.png"
-                            alt=""/>
-                    </div>
-                    <p>Vahe</p>
-                </li>
-                <li>
-                    <div className='img-container'>
-                        <img
-                            src="https://upload-icon.s3.us-east-2.amazonaws.com/uploads/icons/png/4080540331548233623-512.png"
-                            alt=""/>
-                    </div>
-                    <p>Vahe</p>
-                </li>
-                <li>
-                    <div className='img-container'>
-                        <img
-                            src="https://upload-icon.s3.us-east-2.amazonaws.com/uploads/icons/png/4080540331548233623-512.png"
-                            alt=""/>
-                    </div>
-                    <p>Vahe</p>
-                </li>
+                    <p>{firstName}</p>
+                </li>)}
             </ul>
         </div>
     )
